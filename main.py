@@ -41,14 +41,15 @@ async def cancel_command(bot: Client, m: Message):
 async def help_command(bot: Client, m: Message):
     help_text = """
 Available Commands:
-/start - Start download process
-/auth - Authorize a user (Admin only)  
+/start - Welcome message
+/kmx12 - Start download process  
+/auth - Authorize a user (Admin only)
+/remove - Remove user (Admin only)
 /users - List authorized users (Admin only)
 /stop - Stop the bot
 /help - Show this help
 """
     await m.reply_text(help_text)
-
 @bot.on_message(filters.command(["start"]))
 async def start_command(bot: Client, m: Message):
     user_id = m.from_user.id if m.from_user is not None else None
