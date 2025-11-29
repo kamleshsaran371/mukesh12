@@ -20,7 +20,7 @@ from config import api_id, api_hash, bot_token, auth_users, sudo_users
 import sys
 import re
 import os 
-from authorisation import auth_command, list_users
+from authorisation import auth_command, remove_command, list_users
 
 bot = Client(
     "bot",
